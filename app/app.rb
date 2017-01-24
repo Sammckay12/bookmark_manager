@@ -6,8 +6,16 @@ class BookmarkApp < Sinatra::Base
 
   get '/links' do
     @links = Link.all
-    p @links[0].url
     erb :'links/index'
+  end
+
+  get '/links/new' do
+    erb :'links/new'
+  end
+
+  post '/links' do
+    Link.create(:name => params[:name], :url => params[:url])
+    redirect '/links'
   end
 
   run! if app_file == $0
