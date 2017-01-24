@@ -34,3 +34,11 @@ Update: Update or edit existing entries (SQL - UPDATE)
 Destroy: Delete, deactivate or remove existing entries (SQL DELETE)
 
 SQL - Structured Query Language is used to communicate with a database. It's the standard language for relational database management systems.
+
+
+
+
+
+### Authors
+
+Mike Field-May, Ben Vaughan-Jones, Shoniwa Marovatsanga
