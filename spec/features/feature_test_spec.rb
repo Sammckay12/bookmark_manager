@@ -5,7 +5,7 @@ feature "shows a list of links" do
     Link.create(:name => "Google", :url  => "www.google.co.uk")
   end
   scenario "when I visit the website" do
-    visit ('/')
+    visit ('/links')
     expect(page.status_code).to eq 200
 
     within 'ul#links' do
