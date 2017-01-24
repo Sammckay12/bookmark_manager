@@ -8,7 +8,7 @@ class Student
   include DataMapper::Resource
   property :id, Serial
   property :name, String
-  end
+end
 
 DataMapper.finalize
 DataMapper.auto_upgrade!
