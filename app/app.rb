@@ -7,7 +7,7 @@ class BookmarkApp < Sinatra::Base
   get '/links' do
     @links = Link.all
     p @links[0].url
-    erb :links
+    erb :'links/index'
   end
 
   run! if app_file == $0
