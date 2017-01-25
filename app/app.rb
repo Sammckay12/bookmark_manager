@@ -25,13 +25,10 @@ class BookmarkApp < Sinatra::Base
     redirect '/links'
   end
 
-  get '/links/bubbles' do
-    @links = Link.all( :link => { :tags => 'bubbles' })
-    p @links
+  get '/links/:name' do
+    tag = Tag.first(tag: params[:name])
+    @links = tag ? tag.links : []
     erb :'links/index'
-
   end
-
-  run! if app_file == $0
 
 end
