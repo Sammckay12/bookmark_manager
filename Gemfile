@@ -7,10 +7,13 @@ ruby '2.3.3'
 gem 'data_mapper'
 gem 'dm-migrations'
 gem 'dm-postgres-adapter'
-gem 'pry'
-gem 'rspec'
-gem 'capybara'
-gem 'rspec-sinatra'
 gem 'sinatra'
 gem 'database_cleaner'
 gem 'pg'
+
+group :test do
+  gem 'pry'
+  gem 'rspec'
+  gem 'capybara'
+  gem 'rspec-sinatra'
+end

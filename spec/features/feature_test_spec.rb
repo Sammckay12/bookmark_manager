@@ -1,6 +1,4 @@
 require 'spec_helper'
-require 'database_cleaner'
-
 
 feature "shows a list of links" do
   scenario "when I visit the website" do
