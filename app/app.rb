@@ -18,7 +18,10 @@ class BookmarkApp < Sinatra::Base
   end
 
   post '/links' do
-    Link.create(:name => params[:name], :url => params[:url])
+    link = Link.create(:name => params[:name], :url => params[:url])
+    tag = Tag.first_or_create(:tag => params[:tag])
+    link.tags << tag
+    link.save
     redirect '/links'
   end
 

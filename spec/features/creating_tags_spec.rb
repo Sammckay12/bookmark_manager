@@ -5,6 +5,7 @@ feature 'creating links'do
     visit('/links/new')
     fill_in :name, with: 'Ebay'
     fill_in :url, with: 'www.ebay.co.uk'
+    fill_in :tag, with: 'shopping'
     click_button('Add Link')
     expect(current_path).to eq '/links'
     within 'ul#links' do
