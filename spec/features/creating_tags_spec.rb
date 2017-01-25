@@ -7,10 +7,8 @@ feature 'creating links'do
     fill_in :url, with: 'www.ebay.co.uk'
     fill_in :tag, with: 'shopping'
     click_button('Add Link')
-    expect(current_path).to eq '/links'
-    within 'ul#links' do
-      expect(page).to have_content('Ebay')
-      expect(page).to have_content('www.ebay.co.uk')
-    end
+
+    link = Link.first
+    expect(link.tags.map(&:tag)).to include('shopping')
   end
 end
